@@ -1,0 +1,9 @@
+# Newsletter Configuration
+# Updated automatically during onboarding or when you tell Claude to change settings.
+
+name: ""
+description: ""
+audience: ""
+frequency: "weekly"
+default_template: "standard-weekly"
+topics: []

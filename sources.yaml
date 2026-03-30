@@ -1,0 +1,20 @@
+# Inspiration Sources
+# Managed by the /add-source skill — you don't need to edit this file directly.
+# Just tell Claude: "Add [person/newsletter/website] to my sources"
+
+thought_leaders: []
+
+business_figures: []
+
+newsletters: []
+
+websites: []
+
+research_instructions: |
+  When researching for a newsletter:
+  1. Check if any thought leader has a relevant framework for the topic
+  2. Look for recent posts/articles from business figures on the topic
+  3. Cross-reference with newsletters for trending angles
+  4. Pull philosophical depth from thought leaders, practical angle from business figures
+  5. Never copy — synthesize. The client's voice and brand come first.
+  6. Always attribute ideas when drawing heavily from a specific thinker

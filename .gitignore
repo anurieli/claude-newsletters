@@ -1,0 +1,13 @@
+# Client-specific content (generated during onboarding, not part of the template)
+identity/brand-profile.md
+identity/style-profile.md
+identity/writing-samples/*
+identity/brand-document-original/*
+newsletters/*/drafts/*
+newsletters/*/published/*
+
+# Keep the directories (git needs a file to track empty dirs)
+!identity/writing-samples/.gitkeep
+!identity/brand-document-original/.gitkeep
+!newsletters/*/drafts/.gitkeep
+!newsletters/*/published/.gitkeep
