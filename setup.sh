@@ -1920,7 +1920,7 @@ HEREDOC_EOF
 # README.md
 # ===================================================================
 cat <<'HEREDOC_EOF' > "$NEWSLETTER_DIR/README.md"
-# ai-newsletter-kit
+# claude-newsletters
 
 A Claude Code skill system for automated newsletter creation. Designed to let non-technical clients produce on-brand newsletters through natural conversation with Claude Code.
 
@@ -2105,7 +2105,7 @@ Skills (`.claude/skills/*/SKILL.md`) are the reusable core. When you improve a s
 ```bash
 # Example: update the newsletter skill for all clients
 for client_dir in ~/clients/*-newsletter/; do
-  cp ai-newsletter-kit/.claude/skills/newsletter/SKILL.md \
+  cp claude-newsletters/.claude/skills/newsletter/SKILL.md \
      "$client_dir/.claude/skills/newsletter/SKILL.md"
 done
 ```

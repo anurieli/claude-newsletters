@@ -28,7 +28,7 @@ If the intent is ambiguous, ask one short clarifying question before proceeding.
 
 ### 2. Read sources.yaml
 
-Read `sources.yaml` from the project root (`/Users/arielnurieli/ai-newsletter-kit/sources.yaml`).
+Read `sources.yaml` from the project root (`sources.yaml`).
 
 If the file does not exist, create it with this skeleton:
 

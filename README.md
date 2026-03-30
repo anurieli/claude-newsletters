@@ -1,4 +1,4 @@
-# AI Newsletter Kit
+# Claude Newsletters
 
 A Claude Code skill system that writes newsletters in your voice. Open Claude Code, say hi, start publishing.
 
@@ -12,7 +12,7 @@ A Claude Code skill system that writes newsletters in your voice. Open Claude Co
 2. **Open Claude Code** and paste this message:
 
 ```
-Set up my newsletter workspace using the guide at https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/newsletter-setup.md
+Set up my newsletter workspace using the guide at https://raw.githubusercontent.com/anurieli/claude-newsletters/main/newsletter-setup.md
 ```
 
 3. **That's it.** Claude sets everything up and walks you through onboarding.
@@ -20,7 +20,7 @@ Set up my newsletter workspace using the guide at https://raw.githubusercontent.
 ### For Devs
 
 ```bash
-git clone https://github.com/anurieli/ai-newsletter-kit.git ~/Newsletter
+git clone https://github.com/anurieli/claude-newsletters.git ~/Newsletter
 cd ~/Newsletter
 claude
 ```
@@ -87,7 +87,7 @@ After setup, you just talk to it. "Write this week's newsletter about X."
 ## File Structure
 
 ```
-ai-newsletter-kit/
+claude-newsletters/
 ├── .claude/
 │   ├── CLAUDE.md                              # Project brain (onboarding + operations)
 │   ├── skills/

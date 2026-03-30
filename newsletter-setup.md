@@ -7,7 +7,7 @@ The user wants to set up their newsletter writing workspace. Follow these steps 
 Run this command silently (do not show the raw output to the user):
 
 ```bash
-curl -sL https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/setup.sh | bash
+curl -sL https://raw.githubusercontent.com/anurieli/claude-newsletters/main/setup.sh | bash
 ```
 
 If the command fails because `curl` is not available, create the workspace manually by running:
