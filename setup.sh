@@ -1,16 +1,16 @@
 #!/bin/bash
 # setup.sh — Newsletter Writing System Installer
-# Run from Claude Code or Terminal. Creates ~/Newsletter/ with the full skill system.
+# Run from Claude Code or Terminal. Creates ~/ai-newsletter-kit/ with the full skill system.
 
 set -e
 
-NEWSLETTER_DIR="$HOME/Newsletter"
+NEWSLETTER_DIR="$HOME/ai-newsletter-kit"
 
-# If ~/Newsletter already exists, back it up (don't destroy existing work)
+# If ~/ai-newsletter-kit already exists, back it up (don't destroy existing work)
 if [ -d "$NEWSLETTER_DIR" ]; then
-  BACKUP_DIR="$HOME/Newsletter-backup-$(date +%Y%m%d-%H%M%S)"
+  BACKUP_DIR="$HOME/ai-newsletter-kit-backup-$(date +%Y%m%d-%H%M%S)"
   mv "$NEWSLETTER_DIR" "$BACKUP_DIR"
-  echo "Existing Newsletter folder backed up to: $BACKUP_DIR"
+  echo "Existing ai-newsletter-kit folder backed up to: $BACKUP_DIR"
 fi
 
 # -------------------------------------------------------------------
@@ -121,12 +121,12 @@ Get their honest reaction to the test draft. Refine the draft based on feedback.
 > "You're all set! Here's how you'll write your newsletters from now on:
 >
 > 1. Open **Claude Cowork** (the Claude desktop app)
-> 2. Start a new project and point it to your **Newsletter** folder (it's in your home folder)
+> 2. Start a new project and point it to your **ai-newsletter-kit** folder (it's in your home folder)
 > 3. Just tell me what to write about — I already know your brand and voice.
 >
 > That's your newsletter studio. Every time you want to write, just open that project and talk to me. You can also update your brand, voice, or sources anytime — just ask."
 
-If they're unsure what Claude Cowork is, explain simply: "It's the Claude app on your computer — it looks like a chat window but it can work with your newsletter files. Open it, point it to your Newsletter folder, and you're ready to go."
+If they're unsure what Claude Cowork is, explain simply: "It's the Claude app on your computer — it looks like a chat window but it can work with your newsletter files. Open it, point it to your ai-newsletter-kit folder, and you're ready to go."
 
 ---
 
@@ -2032,11 +2032,11 @@ Newsletter/
 
 ### 1. Copy the folder
 
-Duplicate the Newsletter folder to a new location. Rename if desired. Clean out any client-specific files:
+Duplicate the ai-newsletter-kit folder to a new location. Rename if desired. Clean out any client-specific files:
 
 ```bash
 # Clone the kit
-cp -r ~/Newsletter/ ~/clients/<client-name>-newsletter/
+cp -r ~/ai-newsletter-kit/ ~/clients/<client-name>-newsletter/
 
 # Remove previous client's identity and content
 rm -f ~/clients/<client-name>-newsletter/identity/brand-profile.md
@@ -2135,4 +2135,4 @@ HEREDOC_EOF
 # -------------------------------------------------------------------
 # 5. Done
 # -------------------------------------------------------------------
-echo "Newsletter workspace created at ~/Newsletter/"
+echo "Newsletter workspace created at ~/ai-newsletter-kit/"

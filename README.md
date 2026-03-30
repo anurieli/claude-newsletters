@@ -17,17 +17,17 @@ Set up my newsletter workspace using the guide at https://raw.githubusercontent.
 
 3. **Claude sets everything up** and walks you through onboarding — brand, voice, sources, test draft.
 
-4. **When setup is done**, Claude will tell you to open **Claude Cowork** (the desktop app) and open a project pointing to your `Newsletter` folder. That's where you'll write newsletters from now on.
+4. **When setup is done**, Claude will tell you to open **Claude Cowork** (the desktop app) and open a project pointing to your `ai-newsletter-kit` folder. That's where you'll write newsletters from now on.
 
 ### For Devs
 
 ```bash
-git clone https://github.com/anurieli/ai-newsletter-kit.git ~/Newsletter
-cd ~/Newsletter
+git clone https://github.com/anurieli/ai-newsletter-kit.git ~/ai-newsletter-kit
+cd ~/ai-newsletter-kit
 claude
 ```
 
-Say hi — onboarding kicks in. After setup, open the `~/Newsletter` folder as a project in Claude Cowork for day-to-day use.
+Say hi — onboarding kicks in. After setup, open the `~/ai-newsletter-kit` folder as a project in Claude Cowork for day-to-day use.
 
 ---
 

@@ -13,7 +13,7 @@ curl -sL https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/setup
 If the command fails because `curl` is not available, create the workspace manually by running:
 
 ```bash
-mkdir -p ~/Newsletter/.claude/skills/{digest-brand,style-capture,add-source,newsletter/templates} ~/Newsletter/.claude/agents ~/Newsletter/identity/{writing-samples,brand-document-original} ~/Newsletter/newsletters/my-newsletter/{drafts,published}
+mkdir -p ~/ai-newsletter-kit/.claude/skills/{digest-brand,style-capture,add-source,newsletter/templates} ~/ai-newsletter-kit/.claude/agents ~/ai-newsletter-kit/identity/{writing-samples,brand-document-original} ~/ai-newsletter-kit/newsletters/my-newsletter/{drafts,published}
 ```
 
 Then tell the user there was a partial setup issue and ask them to try again.
@@ -21,7 +21,7 @@ Then tell the user there was a partial setup issue and ask them to try again.
 ## Step 2: Switch to the workspace
 
 ```bash
-cd ~/Newsletter
+cd ~/ai-newsletter-kit
 ```
 
 ## Step 3: Confirm to the user
@@ -34,7 +34,7 @@ Do NOT mention files, folders, scripts, bash, Terminal, or anything technical. J
 
 ## Step 4: Begin onboarding
 
-Read the file `~/Newsletter/.claude/CLAUDE.md` and follow the onboarding flow described there. Start with Step 1 (Welcome) and proceed through each step conversationally.
+Read the file `~/ai-newsletter-kit/.claude/CLAUDE.md` and follow the onboarding flow described there. Start with Step 1 (Welcome) and proceed through each step conversationally.
 
 Key reminders:
 - The user is not technical. Use warm, plain language throughout.
@@ -51,7 +51,7 @@ After onboarding is complete (brand profile, style profile, sources, and test dr
 > "You're all set! From now on, here's how you'll write your newsletters:
 >
 > 1. Open **Claude Cowork** (the Claude desktop app)
-> 2. Start a new project and point it to your **Newsletter** folder (it's in your home folder)
+> 2. Start a new project and point it to your **ai-newsletter-kit** folder (it's in your home folder)
 > 3. Just tell me what to write about — I already know your brand and voice.
 >
 > That's your newsletter studio. Every time you want to write, just open that project and talk to me."

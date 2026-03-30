@@ -78,12 +78,12 @@ Get their honest reaction to the test draft. Refine the draft based on feedback.
 > "You're all set! Here's how you'll write your newsletters from now on:
 >
 > 1. Open **Claude Cowork** (the Claude desktop app)
-> 2. Start a new project and point it to your **Newsletter** folder (it's in your home folder)
+> 2. Start a new project and point it to your **ai-newsletter-kit** folder (it's in your home folder)
 > 3. Just tell me what to write about — I already know your brand and voice.
 >
 > That's your newsletter studio. Every time you want to write, just open that project and talk to me. You can also update your brand, voice, or sources anytime — just ask."
 
-If they're unsure what Claude Cowork is, explain simply: "It's the Claude app on your computer — it looks like a chat window but it can work with your newsletter files. Open it, point it to your Newsletter folder, and you're ready to go."
+If they're unsure what Claude Cowork is, explain simply: "It's the Claude app on your computer — it looks like a chat window but it can work with your newsletter files. Open it, point it to your ai-newsletter-kit folder, and you're ready to go."
 
 ---
 
