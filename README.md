@@ -15,7 +15,9 @@ A Claude Code skill system that writes newsletters in your voice. Open Claude Co
 Set up my newsletter workspace using the guide at https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/newsletter-setup.md
 ```
 
-3. **That's it.** Claude sets everything up and walks you through onboarding.
+3. **Claude sets everything up** and walks you through onboarding — brand, voice, sources, test draft.
+
+4. **When setup is done**, Claude will tell you to open **Claude Cowork** (the desktop app) and open a project pointing to your `Newsletter` folder. That's where you'll write newsletters from now on.
 
 ### For Devs
 
@@ -25,7 +27,7 @@ cd ~/Newsletter
 claude
 ```
 
-Then say hi — the onboarding flow kicks in automatically.
+Say hi — onboarding kicks in. After setup, open the `~/Newsletter` folder as a project in Claude Cowork for day-to-day use.
 
 ---
 

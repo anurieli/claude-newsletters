@@ -73,9 +73,17 @@ Ask the client to pick a topic and write a test draft using `/newsletter`. This 
 
 Get their honest reaction to the test draft. Refine the draft based on feedback. If the feedback reveals gaps in the brand or style profile, update those files.
 
-### Step 8 — Confirm Setup
+### Step 8 — Confirm Setup & Transition to Cowork
 
-> "You're all set. From now on, just tell me what to write about and I'll draft it in your voice. You can also update your brand, voice, or sources anytime — just ask."
+> "You're all set! Here's how you'll write your newsletters from now on:
+>
+> 1. Open **Claude Cowork** (the Claude desktop app)
+> 2. Start a new project and point it to your **Newsletter** folder (it's in your home folder)
+> 3. Just tell me what to write about — I already know your brand and voice.
+>
+> That's your newsletter studio. Every time you want to write, just open that project and talk to me. You can also update your brand, voice, or sources anytime — just ask."
+
+If they're unsure what Claude Cowork is, explain simply: "It's the Claude app on your computer — it looks like a chat window but it can work with your newsletter files. Open it, point it to your Newsletter folder, and you're ready to go."
 
 ---
 
