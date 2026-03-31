@@ -104,7 +104,6 @@ Ask about their newsletter specifics:
 - Target audience
 - Publishing frequency
 - Typical topics or recurring themes
-- Platform (Substack, Beehiiv, email, etc.)
 
 Create a `config.yaml` in the appropriate `newsletters/[name]/` subfolder with these details.
 
