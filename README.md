@@ -1,6 +1,6 @@
-# Claude Newsletters
+# AI Newsletter Kit
 
-A Claude Code skill system that writes newsletters in your voice. Open Claude Code, say hi, start publishing.
+A Claude Code skill system that writes newsletters in your voice. Open Claude Code, paste one line, start publishing.
 
 ---
 
@@ -15,9 +15,9 @@ A Claude Code skill system that writes newsletters in your voice. Open Claude Co
 Set up my newsletter workspace using the guide at https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/newsletter-setup.md
 ```
 
-3. **Claude sets everything up** and walks you through onboarding — brand, voice, sources, test draft.
+3. **Claude sets everything up** and walks you through onboarding — your brand, your voice, your sources, and a test draft.
 
-4. **When setup is done**, Claude will tell you to open **Claude Cowork** (the desktop app) and open a project pointing to your `ai-newsletter-kit` folder. That's where you'll write newsletters from now on.
+4. **When setup is done**, Claude tells you to open **Claude Cowork** (the desktop app) and open a project pointing to your new folder. That's your newsletter studio from now on.
 
 ### For Devs
 
@@ -27,7 +27,47 @@ cd ~/ai-newsletter-kit
 claude
 ```
 
-Say hi — onboarding kicks in. After setup, open the `~/ai-newsletter-kit` folder as a project in Claude Cowork for day-to-day use.
+Say hi — onboarding kicks in. After setup, open the folder as a project in Claude Cowork for day-to-day use.
+
+---
+
+## What You Get
+
+When setup finishes, you have a folder on your computer called `ai-newsletter-kit`. This folder is your newsletter — it holds everything Claude needs to write in your voice:
+
+- **Your brand profile** — who you are, who you serve, what you stand for
+- **Your writing voice** — how you sound on the page, captured from your own writing
+- **Your inspiration sources** — the thinkers, authors, and newsletters you draw from
+- **Your drafts** — every newsletter Claude writes, automatically saved
+- **The skills** — the instructions that tell Claude how to research, write, and edit for you
+
+You can **rename this folder to anything you want** at any time. Call it `leadership-weekly`, `my-newsletter`, your brand name — whatever makes sense to you. Nothing will break. Claude doesn't care what the folder is called. It reads the files inside, not the folder name.
+
+---
+
+## Creating Another Newsletter (Different Brand / Voice)
+
+Want a second newsletter with a completely different brand, voice, or audience? Paste the same setup line into Claude Code again:
+
+```
+Set up my newsletter workspace using the guide at https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/newsletter-setup.md
+```
+
+Here's what happens:
+
+1. Your existing `ai-newsletter-kit` folder gets **backed up automatically** (renamed with a timestamp — nothing is lost)
+2. A fresh `ai-newsletter-kit` folder is created
+3. Claude walks you through onboarding again — new brand, new voice, new sources
+4. When you're done, **rename the folder** to tell them apart
+
+**Example:** After two setups, you might have:
+
+```
+~/leadership-weekly/        ← your first newsletter (renamed from ai-newsletter-kit)
+~/wellness-monthly/         ← your second newsletter (renamed from ai-newsletter-kit)
+```
+
+Each folder is completely independent. Different brand, different voice, different sources, different drafts. Open Claude Cowork, point it at whichever folder you want to work in.
 
 ---
 
@@ -45,6 +85,8 @@ The system learns your brand, your writing voice, and your inspiration sources. 
 | `/style-capture` | Analyzes your writing samples (or interviews you) → captures your writing voice |
 | `/add-source` | Manages your inspiration sources — thought leaders, newsletters, websites |
 | `/newsletter` | The main pipeline: topic → research → draft → self-edit → deliver |
+
+You don't need to memorize these. Just talk to Claude naturally — "write a newsletter about X", "add Seth Godin to my sources", "update my brand to focus more on leadership." Claude figures out which skill to use.
 
 ### Newsletter Templates
 
@@ -89,33 +131,31 @@ After setup, you just talk to it. "Write this week's newsletter about X."
 ## File Structure
 
 ```
-ai-newsletter-kit/
-├── .claude/
-│   ├── CLAUDE.md                              # Project brain (onboarding + operations)
+ai-newsletter-kit/                                  ← rename this to anything
+├── .claude/                                         ← the brain (don't touch)
+│   ├── CLAUDE.md
 │   ├── skills/
-│   │   ├── digest-brand/SKILL.md              # Brand profiling
-│   │   ├── style-capture/SKILL.md             # Voice cloning
-│   │   ├── add-source/SKILL.md                # Source management
+│   │   ├── digest-brand/SKILL.md
+│   │   ├── style-capture/SKILL.md
+│   │   ├── add-source/SKILL.md
 │   │   └── newsletter/
-│   │       ├── SKILL.md                       # Main newsletter pipeline
-│   │       └── templates/                     # 4 newsletter format templates
+│   │       ├── SKILL.md
+│   │       └── templates/
 │   └── agents/
-│       └── newsletter-writer.md               # Autonomous drafting agent
-├── identity/
-│   ├── brand-profile.md                       # [Generated] Your brand identity
-│   ├── style-profile.md                       # [Generated] Your writing voice
-│   ├── brand-document-original/               # Drop your brand doc here
-│   └── writing-samples/                       # Drop your writing samples here
-├── newsletters/
+│       └── newsletter-writer.md
+├── identity/                                        ← your brand + voice
+│   ├── brand-profile.md
+│   ├── style-profile.md
+│   ├── brand-document-original/
+│   └── writing-samples/
+├── newsletters/                                     ← your content
 │   └── my-newsletter/
-│       ├── config.yaml                        # Newsletter settings
-│       ├── drafts/                            # Auto-saved drafts
-│       └── published/                         # Approved finals
-├── sources.yaml                               # Your inspiration sources
-├── setup.sh                                   # One-command installer
-├── newsletter-setup.md                        # Setup instructions for Claude
-├── QUICKSTART.md                              # Plain-language user guide
-└── README.md                                  # This file
+│       ├── config.yaml
+│       ├── drafts/
+│       └── published/
+├── sources.yaml                                     ← your inspiration sources
+├── QUICKSTART.md                                    ← plain-language guide
+└── README.md                                        ← this file
 ```
 
 ---
@@ -126,8 +166,9 @@ ai-newsletter-kit/
 
 1. Have the client install Claude Code
 2. Give them the one-liner to paste into Claude Code (see Quick Start above)
-3. Walk them through onboarding (or let them do it solo — it's guided)
+3. Walk them through onboarding (or let them do it solo — it's fully guided)
 4. Calibrate brand + style profiles until the test draft sounds right
+5. Have them rename the folder to their newsletter's name
 
 ### Deploying for Multiple Clients
 
@@ -144,16 +185,6 @@ The skills are reusable. Client-specific data stays separate:
 ### Updating Skills Across Clients
 
 Push updates to this repo. Clients re-run the setup one-liner — existing profiles and content are backed up automatically before reinstalling.
-
-### Adding a Second Newsletter (Same Client)
-
-Create a new folder under `newsletters/`:
-
-```bash
-mkdir -p newsletters/monthly-deep-dive/{drafts,published}
-```
-
-Identity and sources are shared across all newsletters. Each newsletter gets its own `config.yaml`, drafts, and archive.
 
 ---
 
