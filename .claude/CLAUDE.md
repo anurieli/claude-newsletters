@@ -64,25 +64,32 @@ Ask about their newsletter specifics:
 
 Create a `config.yaml` in the appropriate `newsletters/[name]/` subfolder with these details.
 
-### Step 6 — Test Draft
+### Step 6 — Setup Complete. Handoff.
 
-Ask the client to pick a topic and write a test draft using `/newsletter`. This validates the full pipeline — brand alignment, voice accuracy, and source integration.
+Do NOT do a test draft in this conversation. This session was just for setup. The first real newsletter happens in a new session.
 
-### Step 7 — Feedback and Refinement
+Tell the client the following, warmly and clearly:
 
-Get their honest reaction to the test draft. Refine the draft based on feedback. If the feedback reveals gaps in the brand or style profile, update those files.
-
-### Step 8 — Confirm Setup & Transition to Cowork
-
-> "You're all set! Here's how you'll write your newsletters from now on:
+> "Setup is done! Everything I need to write your newsletters is saved.
 >
-> 1. Open **Claude Cowork** (the Claude desktop app)
-> 2. Start a new project and point it to your **ai-newsletter-kit** folder (it's in your home folder)
-> 3. Just tell me what to write about — I already know your brand and voice.
+> **What just happened:** I created a folder on your computer called `ai-newsletter-kit`. You can find it in your home folder. This folder contains your brand profile, your writing voice, your sources — everything I need to write like you. It's your newsletter's home base.
 >
-> That's your newsletter studio. Every time you want to write, just open that project and talk to me. You can also update your brand, voice, or sources anytime — just ask."
+> **You can rename it.** Call it whatever you want — your newsletter's name, your brand name, anything. You can also move it wherever you like. Nothing will break. What matters is what's inside, not what it's called.
+>
+> **How to write your first newsletter:**
+>
+> **Option 1 — Claude Code (what you're in right now):**
+> Start a new chat. When it asks you to select a folder, find your `ai-newsletter-kit` folder (or whatever you renamed it to). Once you're in, just tell me what to write about.
+>
+> **Option 2 — Claude Cowork (the Claude desktop app):**
+> Open Cowork, create a new project, and point it to your `ai-newsletter-kit` folder. Same thing — just talk to me and I'll draft your newsletter.
+>
+> **Option 3 — Claude.ai (from anywhere, including your phone):**
+> Go to your chats on claude.ai, create a new project. Drag in these three files from your `ai-newsletter-kit` folder: `identity/brand-profile.md`, `identity/style-profile.md`, and `sources.yaml`. That gives me enough context to write for you from anywhere — though drafts won't auto-save to your computer this way.
+>
+> **Now go start a new chat, open your folder, and tell me what your first newsletter should be about.**"
 
-If they're unsure what Claude Cowork is, explain simply: "It's the Claude app on your computer — it looks like a chat window but it can work with your newsletter files. Open it, point it to your ai-newsletter-kit folder, and you're ready to go."
+Important: End the conversation here. The first newsletter should happen in a fresh session so it gets a clean context window. Do not offer to write a test draft in this setup conversation.
 
 ---
 

@@ -44,24 +44,24 @@ Key reminders:
 - If they don't have documents ready, interview them conversationally to build profiles from scratch.
 - Use sub-agents (the Agent tool) for all heavy processing (document analysis, style capture, research, drafting) to keep this conversation lightweight.
 
-## Step 5: Transition to Claude Cowork
+## Step 5: Handoff — DO NOT write a test draft
 
-After onboarding is complete (brand profile, style profile, sources, and test draft are done), tell the user:
+After onboarding is complete (brand profile, style profile, sources, and newsletter config are done), the CLAUDE.md contains a Step 6 handoff message. Follow it exactly. The key points:
 
-> "You're all set! From now on, here's how you'll write your newsletters:
->
-> 1. Open **Claude Cowork** (the Claude desktop app)
-> 2. Start a new project and point it to your **ai-newsletter-kit** folder (it's in your home folder)
-> 3. Just tell me what to write about — I already know your brand and voice.
->
-> That's your newsletter studio. Every time you want to write, just open that project and talk to me."
+1. Tell them what was created — a folder called `ai-newsletter-kit` on their computer with everything inside
+2. Tell them they can rename it and move it — nothing breaks
+3. Give them three options for writing newsletters going forward:
+   - **Claude Code:** Start a new chat, select the folder
+   - **Claude Cowork:** Open a project pointing to the folder
+   - **Claude.ai (mobile/web):** Create a project, drag in the three key files (brand-profile.md, style-profile.md, sources.yaml)
+4. Tell them to go start a new chat now and write their first newsletter there
 
-If they ask what Claude Cowork is, explain: "It's the Claude desktop app — it looks like a regular chat window but it can read and write files in your Newsletter folder. That's where we'll do all your newsletter work going forward."
+**CRITICAL:** Do NOT offer to write a test draft in this setup conversation. End the conversation after the handoff. The first newsletter should happen in a fresh session with a clean context window.
 
 ## Important
 
 - Everything should feel like a conversation, not a setup wizard.
-- Never show file paths, YAML, or config details.
+- Never show file paths, YAML, or config details unless the handoff instructions call for it (the final handoff does mention the folder name — that's intentional so they can find it).
 - Never mention "skills," "agents," "CLAUDE.md," or any system internals.
 - The user's mental model should be: "I'm talking to my newsletter assistant and it's learning about me."
-- The handoff to Claude Cowork should feel natural — "here's your writing studio, go there from now on."
+- The handoff should feel like: "You're ready. Go start writing."
