@@ -1,12 +1,16 @@
 # ai-newsletter-kit
 
-A Claude Code skill system for automated newsletter creation. Designed to let non-technical clients produce on-brand newsletters through natural conversation with Claude Code.
+**For bloggers, Substack writers, Beehiiv creators, Medium authors, and anyone who writes long-form content for an audience.** You have your voice. You have your brand. You just want to go from idea to a finished, publish-ready piece — without all the editing and finicking.
+
+This kit captures how you write, learns your brand, and lets you go from "I want to write about X" to a polished draft in your voice. You review it, tweak what you want, and hit publish.
+
+---
 
 ## Overview
 
-This project is a portable, client-specific newsletter automation kit. It runs entirely within Claude Code -- no external services, no databases, no build steps. The "application" is a structured folder with Claude Code skills, identity profiles, and source configurations that together enable a conversational newsletter workflow.
+This project is a portable newsletter automation kit powered by Claude Code. No external services, no databases, no build steps. It's a structured folder with skills, identity profiles, and source configurations that together enable a conversational newsletter workflow.
 
-Each client gets their own copy of this kit, calibrated to their brand, voice, and sources. The skills handle everything from onboarding (brand + style profiling) to weekly newsletter drafting.
+Each user gets their own copy of this kit, calibrated to their brand, voice, and sources. The skills handle everything from onboarding (brand + style profiling) to weekly newsletter drafting.
 
 ## How It Works
 
