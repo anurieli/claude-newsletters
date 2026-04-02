@@ -1,199 +1,228 @@
-# AI Newsletter Kit
+# ai-newsletter-kit
 
-A Claude Code skill system that writes newsletters in your voice. Open Claude Code, paste one line, start publishing.
+A Claude Code skill system for automated newsletter creation. Designed to let non-technical clients produce on-brand newsletters through natural conversation with Claude Code.
 
----
+## Overview
 
-## Quick Start
+This project is a portable, client-specific newsletter automation kit. It runs entirely within Claude Code -- no external services, no databases, no build steps. The "application" is a structured folder with Claude Code skills, identity profiles, and source configurations that together enable a conversational newsletter workflow.
 
-### For Non-Devs (No Terminal Required)
-
-1. **Install Claude Code** — download the desktop app from [claude.ai/download](https://claude.ai/download)
-2. **Open Claude Code** and paste this message:
-
-```
-Set up my newsletter workspace using the guide at https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/newsletter-setup.md
-```
-
-3. **Claude sets everything up** and walks you through onboarding — your brand, your voice, your sources, and a test draft.
-
-4. **When setup is done**, Claude tells you to open **Claude Cowork** (the desktop app) and open a project pointing to your new folder. That's your newsletter studio from now on.
-
-### For Devs
-
-```bash
-git clone https://github.com/anurieli/ai-newsletter-kit.git ~/ai-newsletter-kit
-cd ~/ai-newsletter-kit
-claude
-```
-
-Say hi — onboarding kicks in. After setup, open the folder as a project in Claude Cowork for day-to-day use.
-
----
-
-## What You Get
-
-When setup finishes, you have a folder on your computer called `ai-newsletter-kit`. This folder is your newsletter — it holds everything Claude needs to write in your voice:
-
-- **Your brand profile** — who you are, who you serve, what you stand for
-- **Your writing voice** — how you sound on the page, captured from your own writing
-- **Your inspiration sources** — the thinkers, authors, and newsletters you draw from
-- **Your drafts** — every newsletter Claude writes, automatically saved
-- **The skills** — the instructions that tell Claude how to research, write, and edit for you
-
-You can **rename this folder to anything you want** at any time. Call it `leadership-weekly`, `my-newsletter`, your brand name — whatever makes sense to you. Nothing will break. Claude doesn't care what the folder is called. It reads the files inside, not the folder name.
-
----
-
-## Creating Another Newsletter (Different Brand / Voice)
-
-Want a second newsletter with a completely different brand, voice, or audience? Paste the same setup line into Claude Code again:
-
-```
-Set up my newsletter workspace using the guide at https://raw.githubusercontent.com/anurieli/ai-newsletter-kit/main/newsletter-setup.md
-```
-
-Here's what happens:
-
-1. Your existing `ai-newsletter-kit` folder gets **backed up automatically** (renamed with a timestamp — nothing is lost)
-2. A fresh `ai-newsletter-kit` folder is created
-3. Claude walks you through onboarding again — new brand, new voice, new sources
-4. When you're done, **rename the folder** to tell them apart
-
-**Example:** After two setups, you might have:
-
-```
-~/leadership-weekly/        ← your first newsletter (renamed from ai-newsletter-kit)
-~/wellness-monthly/         ← your second newsletter (renamed from ai-newsletter-kit)
-```
-
-Each folder is completely independent. Different brand, different voice, different sources, different drafts. Open Claude Cowork, point it at whichever folder you want to work in.
-
----
-
-## What This Does
-
-You talk to Claude. It writes newsletters that sound like you.
-
-The system learns your brand, your writing voice, and your inspiration sources. Then when you say "write a newsletter about delegation," it researches, drafts, self-edits, and delivers — all in your voice, aligned to your brand.
-
-### The Skills
-
-| Skill | What it does |
-|-------|-------------|
-| `/digest-brand` | Ingests your brand document (or interviews you) → generates your brand profile |
-| `/style-capture` | Analyzes your writing samples (or interviews you) → captures your writing voice |
-| `/add-source` | Manages your inspiration sources — thought leaders, newsletters, websites |
-| `/newsletter` | The main pipeline: topic → research → draft → self-edit → deliver |
-
-You don't need to memorize these. Just talk to Claude naturally — "write a newsletter about X", "add Seth Godin to my sources", "update my brand to focus more on leadership." Claude figures out which skill to use.
-
-### Newsletter Templates
-
-- **Standard Weekly** — One main story + quick takes (default)
-- **Deep Dive** — Long-form, single topic
-- **Curated Links** — Commentary on 5-7 links
-- **Announcement** — Short, one message + CTA
-
-### The Agent
-
-`newsletter-writer` — An autonomous agent that can run on a schedule. Picks a topic from your sources, drafts a newsletter, saves it for review. Hands-off mode.
-
----
+Each client gets their own copy of this kit, calibrated to their brand, voice, and sources. The skills handle everything from onboarding (brand + style profiling) to weekly newsletter drafting.
 
 ## How It Works
 
+When you say "write a newsletter about X," here's what actually happens:
+
+1. **Claude reads your files.** It loads your brand profile, voice profile, and inspiration sources. This is how it knows who you are, how you write, and what thinkers and frameworks to draw from.
+
+2. **It matches the topic to your brand.** Does this fit your messaging pillars? Which thought leaders have relevant frameworks? What angle would resonate with your audience? Claude builds a brief and confirms it with you.
+
+3. **It researches.** Web search for current data, examples, and trending perspectives. Cross-references with your curated sources for depth. Tracks attribution so references are woven in naturally.
+
+4. **It drafts in your voice.** Using your chosen template (standard weekly, deep dive, curated links, or announcement) and your 7-dimension voice profile — matching your sentence rhythms, vocabulary, tone, and rhetorical patterns.
+
+5. **It self-edits before you see it.** Checks against your voice profile (does this sound like them?), your brand (on-message? right audience?), source integrity (quotes accurate? claims verified?), and flow (strong opening? smooth transitions? ending that lands?).
+
+6. **You review and iterate.** Claude presents the draft, you give feedback, it revises. Recurring corrections get saved to your voice profile so future newsletters improve.
+
+The whole thing takes minutes. Your newsletter is saved as a draft file ready for your email platform.
+
+### Keeping It Fresh
+
+Your brand and voice aren't set in stone. Update them anytime:
+
+- **"Update my brand"** or **"my positioning has shifted"** — Claude walks you through what's changed and updates your brand profile.
+- **"My writing style has changed"** or **"here are new writing samples"** — Claude re-analyzes your voice or interviews you about what's different.
+- **"Add [person] to my sources"** — Claude researches them and adds them to your sources file.
+
+## Architecture
+
 ### Two Profiles
 
-1. **Brand Profile** (`identity/brand-profile.md`) — What your brand stands for: audience, values, messaging pillars, tone, topics to cover/avoid
-2. **Style Profile** (`identity/style-profile.md`) — How you write: sentence patterns, vocabulary, rhythm, rhetorical devices, voice characteristics
+The system relies on two identity documents that skills read at runtime:
 
-Every draft is filtered through both. Brand governs *what* you say. Style governs *how* you say it.
+1. **`identity/brand-profile.md`** -- What the brand stands for: audience, values, messaging pillars, tone guidelines, topics to cover/avoid. Generated by the `/digest-brand` skill.
 
-### Sources Library
+2. **`identity/style-profile.md`** -- How the client writes: sentence patterns, vocabulary, rhetorical devices, rhythm, voice characteristics. Generated by the `/style-capture` skill.
 
-`sources.yaml` — Your curated thought leaders, business figures, newsletters, and websites. The `/newsletter` skill draws from these during research. Managed conversationally via `/add-source`.
+These profiles are the source of truth for all content generation. The `/newsletter` skill reads both before drafting.
 
-### Onboarding
+### Sources Config
 
-When you first open Claude Code in this folder, it detects empty profiles and walks you through setup:
+**`sources.yaml`** (project root) defines the thought leaders, business figures, newsletters, and websites the system draws from during research. Managed via the `/add-source` skill. Includes a `research_instructions` block that guides how sources are prioritized during newsletter research.
 
-1. Brand profile (from a document or conversation)
-2. Writing voice (from samples or conversation)
-3. Inspiration sources
-4. Newsletter config (name, audience, frequency)
-5. Test draft
+### Skills
 
-After setup, you just talk to it. "Write this week's newsletter about X."
+All skills live in `.claude/skills/` and follow Claude Code's skill convention (each has a `SKILL.md`).
 
----
+| Skill | Purpose | Output |
+|-------|---------|--------|
+| `/digest-brand` | Ingest brand document or run conversational interview to produce brand profile | `identity/brand-profile.md` |
+| `/style-capture` | Analyze writing samples (or interview) to produce a 7-dimension style DNA profile | `identity/style-profile.md` |
+| `/add-source` | Add, remove, update, or list inspiration sources | `sources.yaml` |
+| `/newsletter` | Research, draft, and save a newsletter issue | `newsletters/<name>/drafts/<date>-<slug>.md` |
+| `/import-voice` | (Planned) Import voice data from alternative formats | TBD |
+
+### Newsletter Storage
+
+```
+newsletters/
+  my-newsletter/              # One folder per newsletter series
+    drafts/                    # Working drafts (auto-saved here)
+    published/                 # Final versions moved here after approval
+```
+
+Each newsletter series gets its own subfolder. Multiple series per client are supported (see "Cloning for a second newsletter" below).
 
 ## File Structure
 
 ```
-ai-newsletter-kit/                                  ← rename this to anything
-├── .claude/                                         ← the brain (don't touch)
-│   ├── CLAUDE.md
-│   ├── skills/
-│   │   ├── digest-brand/SKILL.md
-│   │   ├── style-capture/SKILL.md
-│   │   ├── add-source/SKILL.md
-│   │   └── newsletter/
-│   │       ├── SKILL.md
-│   │       └── templates/
-│   └── agents/
-│       └── newsletter-writer.md
-├── identity/                                        ← your brand + voice
-│   ├── brand-profile.md
-│   ├── style-profile.md
-│   ├── brand-document-original/
-│   └── writing-samples/
-├── newsletters/                                     ← your content
-│   └── my-newsletter/
-│       ├── config.yaml
-│       ├── drafts/
-│       └── published/
-├── sources.yaml                                     ← your inspiration sources
-├── QUICKSTART.md                                    ← plain-language guide
-└── README.md                                        ← this file
+Newsletter/
+|
+|-- .claude/
+|   |-- agents/
+|   |   |-- newsletter-writer.md
+|   |-- skills/
+|       |-- add-source/
+|       |   |-- SKILL.md
+|       |-- digest-brand/
+|       |   |-- SKILL.md
+|       |-- newsletter/
+|       |   |-- SKILL.md
+|       |   |-- templates/
+|       |       |-- standard-weekly.md
+|       |       |-- deep-dive.md
+|       |       |-- curated-links.md
+|       |       |-- announcement.md
+|       |-- style-capture/
+|           |-- SKILL.md
+|
+|-- identity/
+|   |-- brand-document-original/
+|   |-- writing-samples/
+|   |-- brand-profile.md
+|   |-- style-profile.md
+|
+|-- newsletters/
+|   |-- my-newsletter/
+|       |-- config.yaml
+|       |-- drafts/
+|       |-- published/
+|
+|-- sources.yaml
+|-- QUICKSTART.md
+|-- README.md
 ```
 
----
+### Client-Specific vs. Reusable
 
-## For Developers / Service Providers
+| Client-specific (unique per deployment) | Reusable (same across all clients) |
+|-----------------------------------------|-------------------------------------|
+| `identity/brand-profile.md` | `.claude/skills/*/SKILL.md` |
+| `identity/style-profile.md` | `QUICKSTART.md` (mostly -- may need light personalization) |
+| `identity/brand-document-original/*` | `README.md` |
+| `identity/writing-samples/*` | `.claude/agents/` (when populated) |
+| `sources.yaml` | Newsletter templates |
+| `newsletters/` contents | |
 
-### Setting Up for a Client
+## Setting Up for a New Client
 
-1. Have the client install Claude Code
-2. Give them the one-liner to paste into Claude Code (see Quick Start above)
-3. Walk them through onboarding (or let them do it solo — it's fully guided)
-4. Calibrate brand + style profiles until the test draft sounds right
-5. Have them rename the folder to their newsletter's name
+### 1. Copy the folder
 
-### Deploying for Multiple Clients
+Duplicate the ai-newsletter-kit folder to a new location. Rename if desired. Clean out any client-specific files:
 
-The skills are reusable. Client-specific data stays separate:
+```bash
+# Clone the kit
+cp -r ~/ai-newsletter-kit/ ~/clients/<client-name>-newsletter/
 
-| Reusable (same for everyone) | Client-specific |
-|------------------------------|----------------|
-| `.claude/skills/*` | `identity/brand-profile.md` |
-| `.claude/agents/*` | `identity/style-profile.md` |
-| Newsletter templates | `identity/writing-samples/*` |
-| `setup.sh`, `newsletter-setup.md` | `sources.yaml` |
-| `QUICKSTART.md` | `newsletters/` contents |
+# Remove previous client's identity and content
+rm -f ~/clients/<client-name>-newsletter/identity/brand-profile.md
+rm -f ~/clients/<client-name>-newsletter/identity/style-profile.md
+rm -rf ~/clients/<client-name>-newsletter/identity/brand-document-original/*
+rm -rf ~/clients/<client-name>-newsletter/identity/writing-samples/*
+rm -f ~/clients/<client-name>-newsletter/sources.yaml
+rm -rf ~/clients/<client-name>-newsletter/newsletters/my-newsletter/drafts/*
+rm -rf ~/clients/<client-name>-newsletter/newsletters/my-newsletter/published/*
+```
 
-### Updating Skills Across Clients
+Rename the newsletter series folder if "my-newsletter" doesn't fit the new client:
 
-Push updates to this repo. Clients re-run the setup one-liner — existing profiles and content are backed up automatically before reinstalling.
+```bash
+mv ~/clients/<client-name>-newsletter/newsletters/my-newsletter \
+   ~/clients/<client-name>-newsletter/newsletters/<series-name>
+```
 
----
+### 2. Install Claude Code on the client's machine
 
-## Context Management
+The client needs Claude Code installed and configured. Point their default project directory at the newsletter kit folder so it opens there automatically.
 
-All heavy processing (document analysis, style capture, research, drafting) is delegated to sub-agents. This keeps the main conversation lightweight so clients can do full onboarding + first draft in a single session without hitting context limits.
+### 3. Walk through onboarding (or let auto-onboarding handle it)
 
----
+Onboarding involves two steps that can happen in either order:
 
-## No Dependencies
+**Brand profile** -- Either:
+- Drop the client's brand document into `identity/brand-document-original/` and run `/digest-brand`, or
+- Run `/digest-brand` with no document and let the conversational interview guide them through it.
 
-This is pure Claude Code. No packages, no APIs, no build steps, no databases. The entire system is markdown files that Claude reads. If you have Claude Code, you have everything you need.
+**Style profile** -- Either:
+- Drop 3-5 writing samples into `identity/writing-samples/` and run `/style-capture`, or
+- Run `/style-capture` with no samples and use the interview mode.
+
+Both skills are designed to be client-friendly. The client can run them on their own if given the QUICKSTART guide.
+
+### 4. Calibrate brand + style profiles
+
+After initial generation, review both profiles:
+
+- Read `identity/brand-profile.md` -- does it capture the brand accurately?
+- Read `identity/style-profile.md` -- does the Quick Reference section match the client's voice?
+
+Have the client review and iterate. Both skills support version bumping and re-runs.
+
+### 5. Populate sources
+
+Run `/add-source` to add the thought leaders, business figures, newsletters, and websites the client draws inspiration from. This populates `sources.yaml` and directly affects research quality during newsletter drafting.
+
+Start with 5-10 sources across categories. The client can add more over time.
+
+## Cloning for a Second Newsletter (Same Client)
+
+If a client wants a second newsletter series (e.g., a monthly deep-dive in addition to their weekly):
+
+1. Create a new series folder:
+
+```bash
+mkdir -p newsletters/<new-series-name>/drafts
+mkdir -p newsletters/<new-series-name>/published
+```
+
+2. The identity profiles and sources are shared across series -- no duplication needed. The `/newsletter` skill should be told which series to target when invoked, or the skill can be extended to ask.
+
+3. If the second newsletter has a different voice or brand angle, consider whether the existing profiles are sufficient or if additional profile variants are needed. For most clients, one brand profile and one style profile cover all their newsletters.
+
+## Updating Skills Across Clients
+
+Skills (`.claude/skills/*/SKILL.md`) are the reusable core. When you improve a skill:
+
+1. Make the change in the canonical source (this repo or your template repo).
+2. Copy the updated `SKILL.md` to each client's kit:
+
+```bash
+# Example: update the newsletter skill for all clients
+for client_dir in ~/clients/*-newsletter/; do
+  cp ai-newsletter-kit/.claude/skills/newsletter/SKILL.md \
+     "$client_dir/.claude/skills/newsletter/SKILL.md"
+done
+```
+
+3. Client-specific files (`identity/`, `sources.yaml`, `newsletters/`) are never touched during skill updates.
+
+Consider version-tagging skill updates (in the SKILL.md frontmatter or a changelog) to track which clients are on which version.
+
+## Development Notes
+
+- **No runtime dependencies.** This is pure Claude Code skills + structured files. No packages, no build, no deploy.
+- **Skills are the API.** Each skill's `SKILL.md` defines inputs, outputs, and behavior. Treat them as contracts.
+- **Identity profiles have YAML frontmatter** with `version` fields. Always increment on update, never overwrite silently.
+- **`sources.yaml` has a `research_instructions` block** that must be preserved on every write. Skills that modify sources must read and re-emit this block.
+- **The `/import-voice` skill** is stubbed out but not yet implemented. Intended for importing voice data from formats beyond plain text samples.
+- **Templates** (`newsletter/templates/`) define the structural scaffolding for Standard Weekly, Deep Dive, Curated Links, and Announcement formats.
