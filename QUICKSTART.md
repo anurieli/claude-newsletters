@@ -83,6 +83,27 @@ You're always in control. It won't publish anything -- it just writes drafts for
 
 ---
 
+## It Learns How You Write
+
+This is the part most people don't expect: **the more you use it, the better it gets at sounding like you.**
+
+When you're reading a draft and something doesn't feel right -- maybe a sentence feels too formal, or an opening is too generic, or you just wouldn't phrase something that way -- tell it. You don't need to use any special command. Just say it naturally:
+
+- "I wouldn't say it like that. I'd say something more like: [your version]"
+- "That intro is too stiff. I'd open with something like..."
+- "This whole section feels off -- too corporate"
+
+Here's what happens when you do that:
+
+1. **It asks you for your version.** If you didn't already give one, it'll ask how you'd actually say it.
+2. **It figures out the difference.** Not just what you changed, but *why* -- are your sentences shorter? Is your tone more direct? Do you avoid certain words?
+3. **It saves what it learned.** Your voice profile gets updated so the *next* draft is closer to how you write.
+4. **It confirms what it picked up.** You'll hear something like: "Got it -- you prefer leading with the action instead of setting it up. I'll do that going forward."
+
+You don't have to do this. The first draft will already be close. But every time you push back and show it how you'd actually write something, it gets sharper. Think of it like working with a writing partner who actually listens.
+
+---
+
 ## Newsletter Templates
 
 You can ask for different formats depending on what the newsletter calls for:
