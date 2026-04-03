@@ -1,5 +1,20 @@
 # /style-capture
 
+## Context Management
+
+When executing this skill, use the Agent tool to spawn a sub-agent for the heavy processing work. This keeps the main conversation lightweight and preserves context for the client interaction.
+
+The main conversation should:
+- Handle the client interaction (questions, confirmations, presenting results)
+- Spawn a sub-agent for document analysis, writing sample processing, research, or drafting
+- Receive the sub-agent's output and present it to the client in a friendly way
+
+The sub-agent handles:
+- Reading and analyzing documents
+- Writing profile files
+- Research and fact-gathering
+- Drafting newsletter content
+
 Analyze the client's writing samples and generate a comprehensive "Style DNA" profile that captures their unique voice. The output lives at `identity/style-profile.md` and is consumed by other skills (like `/newsletter`) to produce drafts that sound like the client wrote them.
 
 ---
@@ -17,9 +32,20 @@ Writing samples come from one of two places:
 1. **Files in `identity/writing-samples/`** — any `.md`, `.txt`, or `.html` files dropped there.
 2. **Pasted text** — the client pastes writing directly into the conversation.
 
-You need **at least 3 samples** (ideally 5 or more) for an accurate profile. If fewer are available:
+You need **at least 2-3 samples** (ideally 5 or more) for an accurate profile. This is a hard minimum — do NOT silently proceed with just 1 sample, even if it was already shared during another step (like brand setup).
 
-- Tell the client plainly: "I have [N] sample(s) so far. I can work with this, but the profile will be more accurate with 3-5 pieces of your writing. Want to add more, or should I ask you some questions instead?"
+**If you have only 1 sample:**
+- Do NOT proceed to analysis. Instead, return to the caller (the main conversation) and tell them: "I have one sample so far. I need at least 1-2 more pieces to build a reliable voice profile. Ask the client for more writing samples before I proceed."
+- If the caller insists on proceeding with 1 sample, you may do so but you MUST: (a) supplement heavily with interview questions, (b) mark the profile as low confidence in the Profile Notes section, and (c) include a prominent note recommending the client add more samples.
+
+**If you have 2 samples:**
+- You can proceed, but note in the Profile Notes that confidence would improve with more samples.
+
+**If you have 3+ samples:**
+- Proceed with full confidence.
+
+In all cases, if fewer than 3 are available:
+- Tell the client plainly: "I have [N] sample(s) so far. I can work with this, but the profile will be more accurate with 3-5 pieces of your writing. Want to add more, or should I ask you some questions to fill in the gaps?"
 - Offer **interview mode** (see below).
 
 ## Interview mode (no samples or supplemental)

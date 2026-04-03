@@ -67,11 +67,21 @@ Do not proceed until `identity/brand-profile.md` exists and the client has appro
 
 ### Step 3 — Writing Voice
 
-Ask for 3-5 writing samples (past newsletters, blog posts, emails, social posts — anything in their voice). Three paths:
+**Minimum sample rule:** You need **at least 2-3 writing samples** to build a reliable voice profile. One article is not enough — even if the client already shared a piece during the brand step. That piece counts toward the total, but you must still ask for more before running `/style-capture`.
+
+**Important:** If the client shared writing earlier in the conversation (during brand setup, as part of answering questions, etc.), acknowledge it and count it — but explicitly ask for 2+ additional pieces. Do NOT skip this step or say "I already have your article, let me build your voice profile." That produces a weak profile based on a single data point.
+
+Ask for 3-5 writing samples (past newsletters, blog posts, emails, social posts — anything in their voice). Four paths:
 
 1. **They have samples** — Ask them to drop files in `identity/writing-samples/`. Then run `/style-capture` to generate `identity/style-profile.md`.
-2. **They have some writing but not much** — Even 1-2 samples help. Analyze what's available, supplement with interview questions for gaps.
-3. **They have nothing** — Do NOT just run a pure interview as a substitute. Be honest:
+2. **They already shared one piece earlier** — Acknowledge it, save it to `identity/writing-samples/`, then say something like:
+
+> "I've got the piece you shared earlier — that's a great start. To really nail your voice, I need at least 2-3 more samples. These can be anything you've written — blog posts, LinkedIn posts, emails, even texts or notes where you were being yourself. The more I study, the better I'll sound like you. Got anything else you can drop in?"
+
+If they provide more, proceed with `/style-capture`. If they can only provide 1 more (total of 2), that's workable — note in the profile that confidence would improve with more samples.
+
+3. **They have some writing but not much** — Even 1-2 samples help. Analyze what's available, supplement with interview questions for gaps.
+4. **They have nothing** — Do NOT just run a pure interview as a substitute. Be honest:
 
 > "This is the part where I learn how you actually write — your sentence rhythms, your word choices, your whole voice. I can interview you about your preferences, but honestly? The results are so much better when I can study real writing.
 >
@@ -123,7 +133,9 @@ Tell the client the following, warmly and clearly:
 >
 > **From your phone or the web (lighter option):** You can also go to claude.ai, create a new Project, and drag in the files from your newsletter folder. I won't have all my skills available that way and drafts won't auto-save, but it works in a pinch for a quick draft when you're away from your computer.
 >
-> **One more thing — I learn as we go.** If a draft doesn't quite sound like you, just tell me. Say things like 'I wouldn't say it like that — I'd say it more like this' and give me your version. I'll figure out what's different, update your voice profile, and get closer every time. You don't have to do anything special — just talk to me like you would a writing partner. The more we work together, the more I sound like you."
+> **One more thing — I learn as we go.** If a draft doesn't quite sound like you, just tell me. Say things like 'I wouldn't say it like that — I'd say it more like this' and give me your version. I'll figure out what's different, update your voice profile, and get closer every time. You don't have to do anything special — just talk to me like you would a writing partner. The more we work together, the more I sound like you.
+>
+> **And you can always feed me more writing.** If you publish a new article, write a LinkedIn post, or even just draft an email that feels very *you* — drop it in. The more examples of your writing I can study, the sharper your voice profile gets. It's the single best thing you can do to make the drafts sound more like you."
 
 After delivering the handoff message, open the project directory in Finder so the client can see it immediately:
 
