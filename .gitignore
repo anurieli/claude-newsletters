@@ -3,6 +3,8 @@ identity/brand-profile.md
 identity/style-profile.md
 identity/writing-samples/*
 identity/brand-document-original/*
+sources.yaml
+newsletters/*/config.yaml
 newsletters/*/drafts/*
 newsletters/*/published/*
 

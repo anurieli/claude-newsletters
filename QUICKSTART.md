@@ -163,6 +163,16 @@ If the drafts don't quite sound like you, or your style has shifted, you can rec
 
 It will ask you a few questions or look at new writing samples to fine-tune how it captures your voice.
 
+### Check for updates
+
+The tool gets better over time -- new features, smarter drafting, improved templates. To check for updates:
+
+```
+/update
+```
+
+It will check if anything new is available, install it, and tell you what changed. Your personal files (brand, voice, sources, drafts) are never touched -- only the tool itself gets updated.
+
 ---
 
 ## Tips for Getting the Best Results

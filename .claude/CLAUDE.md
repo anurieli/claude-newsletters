@@ -254,6 +254,7 @@ This is critical because clients will often do everything in a single session. S
 | `/digest-brand` | Ingest or update the client's brand document into `identity/brand-profile.md` |
 | `/style-capture` | Analyze writing samples into `identity/style-profile.md` |
 | `/add-source` | Add, remove, update, or list inspiration sources in `sources.yaml` |
+| `/update` | Check for and install updates to skills, templates, and system files |
 
 ---
 
@@ -274,6 +275,7 @@ The client will speak naturally. Route to the right skill:
 | "I wouldn't say it like that" | Voice Refinement (passive — see above) |
 | "That doesn't sound like me" | Voice Refinement (passive — see above) |
 | "I'd phrase it more like..." | Voice Refinement (passive — see above) |
+| "Update" or "check for updates" | `/update` |
 
 If the request does not map to a skill, use your judgment — the client may just want a conversation, a brainstorm, or help thinking through a topic. Not everything is a skill invocation.
 
