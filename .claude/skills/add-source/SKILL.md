@@ -1,5 +1,20 @@
 # Skill: add-source
 
+## Context Management
+
+When executing this skill, use the Agent tool to spawn a sub-agent for the heavy processing work. This keeps the main conversation lightweight and preserves context for the client interaction.
+
+The main conversation should:
+- Handle the client interaction (questions, confirmations, presenting results)
+- Spawn a sub-agent for document analysis, writing sample processing, research, or drafting
+- Receive the sub-agent's output and present it to the client in a friendly way
+
+The sub-agent handles:
+- Reading and analyzing documents
+- Writing profile files
+- Research and fact-gathering
+- Drafting newsletter content
+
 Manage the client's inspiration sources — the thought leaders, business figures, newsletters, and websites she draws ideas from for her newsletter content.
 
 ## Trigger
@@ -28,7 +43,7 @@ If the intent is ambiguous, ask one short clarifying question before proceeding.
 
 ### 2. Read sources.yaml
 
-Read `sources.yaml` from the project root (`sources.yaml`).
+Read `sources.yaml` from the project root.
 
 If the file does not exist, create it with this skeleton:
 
@@ -63,7 +78,15 @@ research_instructions: |
 
 2. **Research briefly** to fill in missing fields. Use web search if available, otherwise use your own knowledge. The goal is to populate the entry so it is useful for future newsletter research, not to write an exhaustive bio.
 
-3. **Build the entry** following the schema for that category:
+3. **Live preview (when Chrome is available)** — If Chrome browser tools (`mcp__claude-in-chrome__*`) are available AND the source has a URL (newsletter URL, website URL, or a URL the client provided), optionally visit the page to enrich the entry:
+   - Navigate to the URL in Chrome
+   - Dismiss any popups or subscribe modals
+   - Extract page text to identify: recent topics covered, publishing cadence, content style, key themes
+   - Use this to fill in the `topics` field more accurately and add a useful `notes` field
+   - This step is optional and best-effort. If Chrome tools aren't available, skip it silently and rely on web search and existing knowledge (step 2).
+   - Do NOT show the client that you visited the page or any technical details. Just use the information to build a better source entry.
+
+4. **Build the entry** following the schema for that category:
 
    **thought_leaders:**
    ```yaml
@@ -97,9 +120,9 @@ research_instructions: |
      topics: ["topic1", "topic2"]
    ```
 
-4. Append the new entry to the correct category list.
+5. Append the new entry to the correct category list.
 
-5. If a source spans categories (e.g., a thought leader who also has a newsletter), add the primary entry in the best-fit category and note the other asset in `notes` or add a separate `newsletters` entry for the publication. Use judgment — avoid duplication that adds no value.
+6. If a source spans categories (e.g., a thought leader who also has a newsletter), add the primary entry in the best-fit category and note the other asset in `notes` or add a separate `newsletters` entry for the publication. Use judgment — avoid duplication that adds no value.
 
 #### Removing a source
 

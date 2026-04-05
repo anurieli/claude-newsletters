@@ -115,13 +115,17 @@ Create a `config.yaml` in the appropriate `newsletters/[name]/` subfolder with t
 
 Do NOT do a test draft in this conversation. This session was just for setup. The first real newsletter happens in a new session.
 
-Tell the client the following, warmly and clearly:
+Tell the client the following, warmly and clearly. Deliver it as one cohesive message — do not break it up with pauses or questions:
 
-> "You're all set! Here's what just happened and what to do next.
+> "You're all set! Here's what just happened, what you can do, and how to get started.
+>
+> ---
 >
 > **What just happened:** I created a folder on your computer with everything I need to write your newsletters — your brand profile, your writing voice, your sources. This folder is your newsletter's home base.
 >
 > **You can rename it and move it.** Call it whatever you want — your newsletter's name, your brand name, anything. Move it wherever makes sense on your computer. Nothing will break. What matters is what's inside, not what it's called or where it lives. I'm opening the folder for you now so you can see it.
+>
+> ---
 >
 > **How to write your first newsletter:**
 >
@@ -129,13 +133,67 @@ Tell the client the following, warmly and clearly:
 > 2. Point it at your newsletter folder — the one I just opened for you (or wherever you moved it).
 > 3. Start a new chat and tell me what you want to write about. That's it.
 >
-> I'll research the topic, write a full draft in your voice, and hand it to you ready to review. You should get something that's about 90% there — your voice, your brand, your style.
+> I'll research the topic — including going to your favorite newsletters and websites to see what they've published recently — write a full draft in your voice, and hand it to you ready to review. You should get something that's about 90% there — your voice, your brand, your style.
 >
-> **From your phone or the web (lighter option):** You can also go to claude.ai, create a new Project, and drag in the files from your newsletter folder. I won't have all my skills available that way and drafts won't auto-save, but it works in a pinch for a quick draft when you're away from your computer.
+> ---
 >
-> **One more thing — I learn as we go.** If a draft doesn't quite sound like you, just tell me. Say things like 'I wouldn't say it like that — I'd say it more like this' and give me your version. I'll figure out what's different, update your voice profile, and get closer every time. You don't have to do anything special — just talk to me like you would a writing partner. The more we work together, the more I sound like you.
+> **Everything you can do (with examples):**
 >
-> **And you can always feed me more writing.** If you publish a new article, write a LinkedIn post, or even just draft an email that feels very *you* — drop it in. The more examples of your writing I can study, the sharper your voice profile gets. It's the single best thing you can do to make the drafts sound more like you."
+> **Write a newsletter** — This is the main thing. Just tell me a topic and I'll research it, draft it in your voice, and save it for you.
+> - *"Write a newsletter about why most people overthink their first hire"*
+> - *"Draft something about the difference between being busy and being productive"*
+> - *"I want to write about pricing — riff on Hormozi's value equation"*
+>
+> **Get topic ideas** — Not sure what to write about? Just ask and I'll suggest options based on what's trending in your space.
+> - *"What should I write about this week?"*
+> - *"I'm stuck — give me some ideas"*
+>
+> **See what your sources are writing about** — I can go read the newsletters and websites you follow and tell you what they've been covering lately. Great for finding angles and inspiration.
+> - *"What has Lenny's Newsletter been writing about lately?"*
+> - *"Go check what Morning Brew published this week"*
+> - *"Read Stratechery's latest and tell me the main ideas"*
+>
+> **Add or manage your inspiration sources** — Your sources are the thinkers, newsletters, and websites I draw from when researching. You can add new ones anytime.
+> - *"Add Seth Godin to my sources"*
+> - *"Add the Hustle newsletter"*
+> - *"Who are my current sources?"*
+>
+> **Update your brand** — If your positioning shifts, your audience changes, or you pivot — just tell me and I'll update your brand profile.
+> - *"My audience is shifting more toward solopreneurs"*
+> - *"Here's my updated brand doc" (and paste or drop the file)*
+>
+> **Add a TLDR / teaser** — I can write a one-sentence hook for the top of any draft. It's not a summary — it's a curiosity line that makes readers *need* to start reading. I'll give you 3 options to pick from.
+> - *"Write a TLDR for this draft"*
+> - *"Add a teaser to the top"*
+> - *"Give me a hook line for this piece"*
+>
+> **Refine your voice** — The easiest way is just to react to drafts. But you can also feed me new writing samples anytime.
+> - *"That doesn't sound like me — I'd say it more like this: [your version]"*
+> - *"Here are some new blog posts I wrote" (drop the files in)*
+> - *"My writing style has gotten more casual lately"*
+>
+> ---
+>
+> **How to make the most of this (important!):**
+>
+> The single most powerful thing you can do is **push back on drafts.** Not just "I don't like it" — but showing me *how you'd actually do it.* That's how I learn to sound like you. Here's what I mean:
+>
+> - **If a sentence sounds off:** *"I wouldn't say it like that. I'd say: 'Just start. The plan comes later.'"* — I'll figure out the difference (you're more direct, you use shorter sentences) and remember it.
+> - **If the structure is wrong:** *"I never open with the thesis. I always tell a story first, then get to the point."* — I'll restructure future drafts to match.
+> - **If the tone is off:** *"Too corporate. I write like I'm texting a smart friend."* — I'll recalibrate the whole register.
+> - **If a section doesn't work:** *"The intro is way too long. I do one line, maybe two, then dive in."* — I'll learn your structural preferences, not just your word choices.
+> - **If the format is wrong:** *"I always end with a question to the reader, not a summary."* — I'll adopt that pattern.
+>
+> Every time you correct me, I update your voice profile. The third time I see the same pattern, it becomes a permanent rule. You're literally training me to write like you — the more feedback you give early on, the faster I nail it.
+>
+> **A few more tips:**
+>
+> - **Just talk naturally.** You don't need special commands or formats. Say things the way you'd say them to a person.
+> - **Feed me more writing.** Anytime you publish something, write a LinkedIn post, or even draft an email that feels very *you* — drop it in. More samples = better voice matching. It's the single best thing you can do to make drafts sound more like you.
+> - **Ask for rewrites, not just edits.** "Rewrite the opening with a personal story" or "Make the whole thing shorter and punchier" — I'm happy to iterate as many times as you want.
+> - **You can change templates.** If you want a longer deep-dive instead of a standard newsletter, just say so. You can also say things like "use a different format this time" and I'll suggest options.
+>
+> **From your phone or the web (lighter option):** You can also go to claude.ai, create a new Project, and drag in the files from your newsletter folder. I won't have all my skills available that way and drafts won't auto-save, but it works in a pinch for a quick draft when you're away from your computer."
 
 After delivering the handoff message, open the project directory in Finder so the client can see it immediately:
 
@@ -275,6 +333,8 @@ This is critical because clients will often do everything in a single session. S
 | `/digest-brand` | Ingest or update the client's brand document into `identity/brand-profile.md` |
 | `/style-capture` | Analyze writing samples into `identity/style-profile.md` |
 | `/add-source` | Add, remove, update, or list inspiration sources in `sources.yaml` |
+| `/read-source` | Browse a source's website/newsletter and summarize what they've been writing about |
+| `/tldr` | Generate a one-sentence curiosity hook for the top of a newsletter draft |
 | `/update` | Check for and install updates to skills, templates, and system files |
 
 ---
@@ -289,6 +349,12 @@ The client will speak naturally. Route to the right skill:
 | "Draft something on X" | `/newsletter` |
 | "Add [person] to my sources" | `/add-source` |
 | "Who are my sources?" | `/add-source` (list mode) |
+| "What has X been writing about?" | `/read-source` |
+| "Go check X's latest posts" | `/read-source` |
+| "Read X for inspiration" | `/read-source` |
+| "Write a TLDR for this" | `/tldr` |
+| "Add a teaser to my draft" | `/tldr` |
+| "Give me a hook line" | `/tldr` |
 | "Here's my updated brand doc" | `/digest-brand` |
 | "Update my brand to focus on X" | `/digest-brand` |
 | "My writing style has changed" | `/style-capture` |

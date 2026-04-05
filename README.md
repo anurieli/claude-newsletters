@@ -1,8 +1,47 @@
 # ai-newsletter-kit
 
+> **Don't have a brand yet?** Start with the **[Brand Kit](../brand/)** first. It walks you through building your brand identity, voice, and visual style — the foundation that this kit reads from. You can also set up your brand directly inside this kit, but starting with the Brand Kit means every content kit stays in sync from day one.
+
 **For bloggers, Substack writers, Beehiiv creators, Medium authors, and anyone who writes long-form content for an audience.** You have your voice. You have your brand. You just want to go from idea to a finished, publish-ready piece — without all the editing and finicking.
 
 This kit captures how you write, learns your brand, and lets you go from "I want to write about X" to a polished draft in your voice. You review it, tweak what you want, and hit publish.
+
+---
+
+## Before You Start
+
+You need three things installed before using this kit. None of them cost money.
+
+### 1. Claude App
+
+Download and install the Claude desktop app. This is where you'll interact with the kit — it's your writing partner interface.
+
+- **Download:** [claude.ai/download](https://claude.ai/download)
+- Install it and sign in with your Claude account
+- That's it — no terminal commands, no configuration
+
+### 2. Google Chrome
+
+The kit uses Chrome to read newsletters, blogs, and websites when researching your content. It browses the web the same way you do — which means it can read anything you can, including newsletters you're subscribed to.
+
+- **Download:** [google.com/chrome](https://www.google.com/chrome/) (skip if you already have it)
+
+### 3. Connect Claude to Chrome
+
+This is what lets Claude browse the web on your behalf — visiting your inspiration sources, reading articles, and pulling in real quotes and ideas for your newsletters.
+
+**Setup steps:**
+
+1. Install the **Claude in Chrome** extension from the Chrome Web Store
+   <!-- TODO: Add direct Chrome Web Store link when available -->
+2. Open the Claude desktop app
+3. Go to **Settings** and find the **MCP Servers** section
+4. Enable the **Chrome** connection
+5. You should see a small connection indicator confirming Claude can talk to Chrome
+
+<!-- If you'd like to add a screenshot of the settings screen here, drop it in and I'll reference it. -->
+
+> **Why Chrome?** Other tools like Firecrawl exist for web scraping, but they require API keys, billing accounts, and technical setup. Chrome just works — you already have it, and Claude uses your actual browser session. If you're logged into a Substack or any newsletter platform, Claude can read it too.
 
 ---
 
@@ -20,7 +59,7 @@ When you say "write a newsletter about X," here's what actually happens:
 
 2. **It matches the topic to your brand.** Does this fit your messaging pillars? Which thought leaders have relevant frameworks? What angle would resonate with your audience? Claude builds a brief and confirms it with you.
 
-3. **It researches.** Web search for current data, examples, and trending perspectives. Cross-references with your curated sources for depth. Tracks attribution so references are woven in naturally.
+3. **It researches.** If Chrome is connected, Claude visits your inspiration sources — the actual newsletters and websites you follow — and reads what they've published recently. It also runs web searches for current data, examples, and trending perspectives. Everything gets cross-referenced with your curated sources for depth. Attribution is tracked so references are woven in naturally.
 
 4. **It drafts in your voice.** Using your chosen template (standard weekly, deep dive, curated links, or announcement) and your 7-dimension voice profile — matching your sentence rhythms, vocabulary, tone, and rhetorical patterns.
 
@@ -36,7 +75,117 @@ Your brand and voice aren't set in stone. Update them anytime:
 
 - **"Update my brand"** or **"my positioning has shifted"** — Claude walks you through what's changed and updates your brand profile.
 - **"My writing style has changed"** or **"here are new writing samples"** — Claude re-analyzes your voice or interviews you about what's different.
-- **"Add [person] to my sources"** — Claude researches them and adds them to your sources file.
+- **"Add [person] to my sources"** — Claude researches them and adds them to your sources file. If Chrome is connected, it visits their site to learn what they write about.
+- **"What has [source] been writing about?"** — Claude opens your source's website in Chrome, reads their recent posts, and gives you a summary of themes and ideas. Great for finding inspiration before you write.
+
+## What You Can Do (With Examples)
+
+You don't need to memorize commands. Just talk naturally. Here's everything the kit can do:
+
+### Write a newsletter
+
+The main event. Tell it a topic and it handles research, drafting, and saving.
+
+```
+Write a newsletter about why most people overthink their first hire
+```
+```
+Draft something about the difference between being busy and being productive
+```
+```
+I want to write about pricing — riff on Hormozi's value equation
+```
+
+### Get topic ideas
+
+Not sure what to write about this week? Just ask.
+
+```
+What should I write about this week?
+```
+```
+I'm stuck — give me some ideas
+```
+
+### See what your sources are writing about
+
+Claude opens their actual website or newsletter in Chrome and reads their latest posts — real content, not just a Google search.
+
+```
+What has Lenny's Newsletter been writing about lately?
+```
+```
+Go check what Morning Brew published this week
+```
+```
+Read Stratechery's latest and tell me the main ideas
+```
+
+### Add or manage inspiration sources
+
+Your sources are the thinkers, newsletters, and websites Claude draws from during research.
+
+```
+Add Seth Godin to my sources
+```
+```
+Add the Hustle newsletter
+```
+```
+Who are my current sources?
+```
+
+### Add a TLDR / teaser
+
+After you have a draft, you can add a one-sentence teaser to the top. This isn't a summary — it's a curiosity hook that makes readers need to start reading. Claude will analyze the whole piece, find the most interesting or surprising element, and craft a line that opens a curiosity gap. You get 3 options to pick from.
+
+```
+Write a TLDR for this draft
+```
+```
+Add a teaser to the top
+```
+```
+Give me a hook line for this piece
+```
+
+Claude will also offer to write one after every newsletter draft automatically.
+
+### Update your brand
+
+If your positioning, audience, or messaging shifts.
+
+```
+My audience is shifting more toward solopreneurs
+```
+```
+Here's my updated brand doc
+```
+
+### Refine your voice
+
+This is the secret weapon. Push back on drafts — not just word choices, but structure, tone, format, everything. Claude learns from every correction and permanently updates the voice profile.
+
+```
+That doesn't sound like me — I'd say it more like this: [your version]
+```
+```
+The intro is too long. I always do one line then dive straight in.
+```
+```
+I never open with the thesis. Tell a story first, then get to the point.
+```
+```
+Too corporate. I write like I'm texting a smart friend.
+```
+```
+I always end with a question to the reader, not a summary.
+```
+```
+Here are some new blog posts I wrote
+```
+
+Every correction trains the voice profile. The third time Claude sees the same pattern, it becomes a permanent rule. Early feedback compounds — the more you push back in the first few drafts, the faster it nails your voice.
 
 ## Architecture
 
@@ -62,8 +211,10 @@ All skills live in `.claude/skills/` and follow Claude Code's skill convention (
 |-------|---------|--------|
 | `/digest-brand` | Ingest brand document or run conversational interview to produce brand profile | `identity/brand-profile.md` |
 | `/style-capture` | Analyze writing samples (or interview) to produce a 7-dimension style DNA profile | `identity/style-profile.md` |
-| `/add-source` | Add, remove, update, or list inspiration sources | `sources.yaml` |
-| `/newsletter` | Research, draft, and save a newsletter issue | `newsletters/<name>/drafts/<date>-<slug>.md` |
+| `/add-source` | Add, remove, update, or list inspiration sources. Visits source URLs via Chrome for richer data | `sources.yaml` |
+| `/read-source` | Browse a source's website/newsletter in Chrome and summarize recent topics and ideas | Conversation (optionally saved to `sources-research/`) |
+| `/newsletter` | Research (including live Chrome browsing of sources), draft, and save a newsletter issue | `newsletters/<name>/drafts/<date>-<slug>.md` |
+| `/tldr` | Generate a one-sentence curiosity hook for the top of any newsletter draft | TLDR added to draft file |
 | `/import-voice` | (Planned) Import voice data from alternative formats | TBD |
 
 ### Newsletter Storage
@@ -97,7 +248,11 @@ Newsletter/
 |       |       |-- deep-dive.md
 |       |       |-- curated-links.md
 |       |       |-- announcement.md
+|       |-- read-source/
+|       |   |-- SKILL.md
 |       |-- style-capture/
+|       |   |-- SKILL.md
+|       |-- tldr/
 |           |-- SKILL.md
 |
 |-- identity/

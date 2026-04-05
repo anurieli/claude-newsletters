@@ -8,6 +8,12 @@ Commentary on 5–7 links the client has been reading or thinking about. This fo
 
 ## Structure
 
+### 0. TLDR (optional)
+- One sentence, placed at the very top before the intro
+- Not a summary — a curiosity hook (e.g., the most surprising link or a connecting thread framed as a question)
+- Generated via the `/tldr` skill after the draft is complete — not written during drafting
+- Format: `**TLDR:** [teaser sentence]` followed by a horizontal rule
+
 ### 1. Intro
 - 50–100 words
 - Brief personal note setting the mood or theme for this edition

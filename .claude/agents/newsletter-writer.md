@@ -143,14 +143,15 @@ Read the selected template file for structural guidance.
 
 Before saving, run through this editing checklist:
 
-1. **Voice check** — Read the draft against `style-profile.md`. Flag and fix any sections that drift from the established voice.
-2. **Brand check** — Does every section connect to a messaging pillar? Is the unique POV present?
-3. **Tone check** — Does the tone match the guidelines in `brand-profile.md`? (e.g., if the brand says "confident, not arrogant," check for arrogance.)
-4. **Topics check** — Does the draft touch any topics listed under "Avoid" in `brand-profile.md`? If so, rewrite or remove those sections.
-5. **Freshness check** — Final confirmation that this topic/angle was not covered in recent drafts.
-6. **Clarity pass** — Remove jargon, tighten sentences, cut filler. Every sentence should earn its place.
-7. **Formatting pass** — Ensure consistent heading levels, proper spacing, and clean markdown.
-8. **Fact check** — Verify any statistics, quotes, or claims included. If something cannot be verified, soften the language or remove it.
+1. **Narrative grounding check (CRITICAL)** — The most common draft failure. Verify: concrete first, abstract second. The opening must start with something the reader can see (a scene, moment, question, observable detail) — the thesis lands as the payoff, not the premise. Then check every section opener: does it ground the reader in something concrete before naming a principle? If any section leads with "Here's why X matters..." or "The key insight is..." before showing X in action, flip the order. Simple test: for every abstract claim, ask *has the reader seen this in action yet?* If not, reorder.
+2. **Voice check** — Read the draft against `style-profile.md`. Flag and fix any sections that drift from the established voice.
+3. **Brand check** — Does every section connect to a messaging pillar? Is the unique POV present?
+4. **Tone check** — Does the tone match the guidelines in `brand-profile.md`? (e.g., if the brand says "confident, not arrogant," check for arrogance.)
+5. **Topics check** — Does the draft touch any topics listed under "Avoid" in `brand-profile.md`? If so, rewrite or remove those sections.
+6. **Freshness check** — Final confirmation that this topic/angle was not covered in recent drafts.
+7. **Clarity pass** — Remove jargon, tighten sentences, cut filler. Every sentence should earn its place.
+8. **Formatting pass** — Ensure consistent heading levels, proper spacing, and clean markdown.
+9. **Fact check** — Verify any statistics, quotes, or claims included. If something cannot be verified, soften the language or remove it.
 
 Make all edits. Do not present the first draft as the final output.
 
@@ -190,6 +191,26 @@ source_inspiration: ["source1", "source2"]
 
 [Full newsletter content here]
 ```
+
+### Offer a TLDR
+
+After saving the draft, offer to generate a TLDR — a one-sentence curiosity hook for the top of the piece. This is not a summary — it's a teaser that opens a curiosity gap and makes readers need to read the full piece.
+
+If running autonomously (scheduled mode), generate the TLDR automatically and include it. Pick the strongest option.
+
+If running interactively, ask:
+
+> "Want a TLDR for the top? It's a one-line teaser that hooks readers before they dive in."
+
+If yes:
+1. Analyze the draft to find the core surprise, tension, or counterintuitive element
+2. Generate 3 options using different hook strategies (curiosity gap, assumption flip, specific detail)
+3. Each option must: open a curiosity gap, include at least one concrete detail, match the client's voice, and stand alone without context
+4. Present options and let the client choose
+5. Place the chosen TLDR at the top of the draft after frontmatter, formatted as: `**TLDR:** [teaser]` followed by a horizontal rule
+6. Save the updated draft
+
+If no, skip and proceed to the completion report.
 
 ### Save the file
 

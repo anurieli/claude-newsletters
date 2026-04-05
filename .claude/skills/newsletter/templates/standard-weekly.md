@@ -8,6 +8,14 @@ The default newsletter format. One main story with supporting content. Conversat
 
 ## Structure
 
+### 0. TLDR (optional)
+- One sentence, placed at the very top before the opening hook
+- Not a summary — a curiosity hook that makes readers need to keep reading
+- Opens a curiosity gap: gives enough to intrigue, withholds the resolution
+- Must include at least one specific detail (a number, a timeframe, a named thing)
+- Generated via the `/tldr` skill after the draft is complete — not written during drafting
+- Format: `**TLDR:** [teaser sentence]` followed by a horizontal rule
+
 ### 1. Opening Hook
 - 2–3 sentences maximum
 - Grab attention immediately — use one of these approaches:

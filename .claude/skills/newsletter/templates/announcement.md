@@ -8,6 +8,12 @@ Short, focused, high-signal. One message with one clear call to action. For laun
 
 ## Structure
 
+### 0. TLDR (optional)
+- One sentence, placed at the very top before the hook
+- For announcements, this can be more direct — but still create pull, not just state the news
+- Generated via the `/tldr` skill after the draft is complete — not written during drafting
+- Format: `**TLDR:** [teaser sentence]` followed by a horizontal rule
+
 ### 1. Hook
 - One bold sentence or question — no preamble
 - Hit the reader with energy immediately

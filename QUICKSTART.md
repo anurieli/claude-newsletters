@@ -6,6 +6,25 @@ Here's everything you need to know.
 
 ---
 
+## What You Need (One-Time Setup)
+
+Before you start, make sure you have these three things:
+
+1. **The Claude app** — Download it at [claude.ai/download](https://claude.ai/download). This is where you'll write your newsletters.
+
+2. **Google Chrome** — Download it at [google.com/chrome](https://www.google.com/chrome/) if you don't already have it. The tool uses Chrome to read newsletters and articles for research — it browses the web the same way you do.
+
+3. **Connect Claude to Chrome** — This lets Claude visit websites and read articles on your behalf when researching your newsletter topics.
+   - Install the **Claude in Chrome** extension from the Chrome Web Store
+   - Open the Claude app, go to **Settings**, find **MCP Servers**, and enable the **Chrome** connection
+   - That's it — you'll see a small indicator confirming the connection
+
+> **Why does this matter?** When you tell the tool to write about a topic, it can go read what your favorite thinkers and newsletters have published recently — pulling in real ideas and perspectives, not just generic AI knowledge. If you're subscribed to any newsletters or have accounts on Substack, Medium, etc., it can read those too because it uses your browser.
+
+Once these are set up, you won't need to touch them again. Just open Claude and start writing.
+
+---
+
 ## Opening the Tool
 
 Open the **Claude Code** app on your computer. It automatically opens in your newsletter folder -- you don't need to navigate anywhere or set anything up. Just open it and start talking.
@@ -143,6 +162,38 @@ Your sources are the thinkers, newsletters, and websites the tool draws from whe
 
 That last one (with no name) shows you everything currently in your sources list.
 
+### See what your sources are writing about
+
+Want to know what a newsletter or thinker has been covering lately? Just ask. The tool will actually go read their website or newsletter and summarize the latest themes and ideas for you.
+
+```
+What has Lenny's Newsletter been writing about lately?
+```
+
+```
+Go check what Morning Brew published this week
+```
+
+```
+Read Stratechery's latest and tell me the main ideas
+```
+
+This is a great way to find inspiration before you start writing. It reads real, current content -- not just search results.
+
+### Add a TLDR to your newsletter
+
+After you have a draft, you can add a one-sentence teaser to the top. This isn't a summary -- it's a curiosity hook that makes readers *need* to start reading. The tool will analyze your whole piece, find the most interesting or surprising angle, and give you 3 options to pick from.
+
+```
+Write a TLDR for this draft
+```
+
+```
+Add a teaser to the top
+```
+
+The tool will also offer this after every newsletter draft, so you don't have to remember to ask.
+
 ### Update your brand profile
 
 If your brand evolves -- new positioning, new audience, new values -- you can refresh your brand profile:
@@ -175,15 +226,29 @@ It will check if anything new is available, install it, and tell you what change
 
 ---
 
-## Tips for Getting the Best Results
+## How to Make the Most of This
 
-- **Give feedback on drafts.** The more you tell it what you like and don't like, the better the next draft will be. "I love the opening but the ending feels generic" is exactly the kind of feedback that helps.
+The single most powerful thing you can do is **push back on drafts.** Not just "I don't like it" -- but showing the tool *how you'd actually do it.* That's how it learns to sound like you.
 
-- **Ask for rewrites.** Don't settle. Say "rewrite the second section with more of a personal story" or "make the whole thing shorter and punchier." It's happy to iterate.
+Here's what that looks like:
+
+- **If a sentence sounds off:** "I wouldn't say it like that. I'd say: 'Just start. The plan comes later.'" -- It figures out the difference (shorter, more direct) and remembers it.
+- **If the structure is wrong:** "I never open with the thesis. I always tell a story first, then get to the point." -- It restructures future drafts to match.
+- **If the tone is off:** "Too corporate. I write like I'm texting a smart friend." -- It recalibrates the whole register.
+- **If a section doesn't work:** "The intro is way too long. I do one line, maybe two, then dive in." -- It learns your structural preferences, not just your word choices.
+- **If the format is wrong:** "I always end with a question to the reader, not a summary." -- It adopts that pattern.
+
+Every time you correct it, your voice profile gets updated. The third time it sees the same pattern, it becomes a permanent rule. You're literally training it to write like you -- the more feedback you give early on, the faster it nails your voice.
+
+### More tips
+
+- **Ask for rewrites, not just edits.** "Rewrite the opening with a personal story" or "make the whole thing shorter and punchier." Don't settle -- iterate until it feels right.
 
 - **Reference specific thinkers.** If you want to bring in a particular framework or idea, name the person. "Tie in Brene Brown's work on courage" gives it a clear direction.
 
 - **Share what's going on in your world.** Context helps. "I just had a frustrating client call about scope creep" can become a powerful newsletter angle.
+
+- **Feed it more writing.** Anytime you publish something new, write a LinkedIn post, or even draft an email that feels very *you* -- drop it in. More samples = better voice matching.
 
 - **Don't worry about being too specific or too vague.** It works with whatever you give it. A single sentence is enough to start. A full outline is great too.
 

@@ -8,6 +8,15 @@ Long-form, single-topic exploration. For when the client wants to go deep on one
 
 ## Structure
 
+### 0. TLDR (optional)
+- One sentence, placed at the very top before the title
+- Not a summary — a curiosity hook that makes readers need to keep reading
+- Especially valuable for deep dives where the reader commits to 1500+ words
+- Opens a curiosity gap: gives enough to intrigue, withholds the resolution
+- Must include at least one specific detail (a number, a timeframe, a named thing)
+- Generated via the `/tldr` skill after the draft is complete — not written during drafting
+- Format: `**TLDR:** [teaser sentence]` followed by a horizontal rule
+
 ### 1. Title / Headline
 - Compelling and specific — not clickbait
 - Should communicate what the reader will walk away understanding

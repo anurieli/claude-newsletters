@@ -1,5 +1,20 @@
 # Skill: digest-brand
 
+## Context Management
+
+When executing this skill, use the Agent tool to spawn a sub-agent for the heavy processing work. This keeps the main conversation lightweight and preserves context for the client interaction.
+
+The main conversation should:
+- Handle the client interaction (questions, confirmations, presenting results)
+- Spawn a sub-agent for document analysis, writing sample processing, research, or drafting
+- Receive the sub-agent's output and present it to the client in a friendly way
+
+The sub-agent handles:
+- Reading and analyzing documents
+- Writing profile files
+- Research and fact-gathering
+- Drafting newsletter content
+
 Ingest a client's brand document and produce a standardized `identity/brand-profile.md` that the rest of the newsletter system can rely on.
 
 ## When to use

@@ -1,5 +1,20 @@
 # Newsletter Skill
 
+## Context Management
+
+When executing this skill, use the Agent tool to spawn a sub-agent for the heavy processing work. This keeps the main conversation lightweight and preserves context for the client interaction.
+
+The main conversation should:
+- Handle the client interaction (questions, confirmations, presenting results)
+- Spawn a sub-agent for document analysis, writing sample processing, research, or drafting
+- Receive the sub-agent's output and present it to the client in a friendly way
+
+The sub-agent handles:
+- Reading and analyzing documents
+- Writing profile files
+- Research and fact-gathering
+- Drafting newsletter content
+
 Write a complete newsletter draft that sounds like the client wrote it herself.
 
 ## Trigger
@@ -84,6 +99,32 @@ Internally, assemble a structured brief: key points, relevant thinker references
 
 ## Phase 2: Research & Fact Gathering
 
+### 2a. Live source research (when Chrome is available)
+
+Before falling back to general web search, try to pull fresh content directly from the client's curated inspiration sources.
+
+1. **Check for Chrome browser tools** — Determine whether the `mcp__claude-in-chrome__*` tools (navigate, get_page_text, etc.) are available in the current session. If they are not available, skip this entire sub-step gracefully and proceed to 2b. Do not surface an error to the client.
+
+2. **Select relevant sources** — Read `sources.yaml` and pick 2-3 sources whose URLs are most relevant to the newsletter topic. Prioritize newsletters and websites (sources that publish regularly) over individual thought leaders who may not have a dedicated site.
+
+3. **Visit each source URL** — For each selected source:
+   - Use `navigate` to open the URL.
+   - If a cookie banner, paywall modal, or popup appears, attempt to dismiss it (click dismiss/close/accept buttons).
+   - Use `get_page_text` to extract the visible page content.
+   - Scan for recent posts or articles related to the newsletter topic.
+   - If the landing page is an index or homepage, look for links to recent relevant articles and navigate into 1-2 of them for full text.
+
+4. **Extract research material** — From each visited page, pull out:
+   - Relevant quotes and key phrases
+   - Frameworks, models, or mental models the source uses
+   - Recent data points, statistics, or examples
+   - Unique angles or contrarian takes on the topic
+   - Publication date (to confirm freshness)
+
+5. **Why this matters** — This step produces real, current content from the sources the client actually follows and trusts, not generic web search results. It grounds the newsletter in the same intellectual ecosystem the client inhabits.
+
+### 2b. Web research and source matching
+
 For each key point from the brief, gather supporting material:
 
 - **Current data and examples** — Use web search for recent statistics, case studies, news, or cultural moments that connect to the topic.
@@ -166,10 +207,18 @@ Before presenting anything, run the draft through these checks:
 - No unverified claims stated as fact?
 - Quotes accurate?
 
+### Narrative grounding check (CRITICAL)
+
+This is the most common failure mode in drafts. Check that the piece follows the principle: **concrete first, abstract second. Scene before thesis. Let the reader arrive.**
+
+- **Opening** — Does the piece start with something concrete (a scene, moment, question, or observable detail)? The thesis or core insight should land as the payoff, not the premise. If the draft opens with "Here's why X matters..." or "The key to X is..." — it fails. Flip it: show X in action first, then name it.
+- **Section openers** — Every section should ground the reader in something concrete before naming an abstract principle. If a section opens with "The important thing to understand is..." before showing the thing in action, flip the order.
+- **The test:** For every abstract claim in the draft, ask: *has the reader seen this in action yet?* If not, flip the order. Show first, name second.
+
 ### Flow check
 
 Read the draft start to finish as a reader would. Check for:
-- Strong opening that hooks
+- Strong opening that hooks (must pass the narrative grounding check above — concrete first, not thesis-first)
 - Smooth transitions between sections
 - A clear throughline from start to finish
 - An ending that lands (not a fizzle)
@@ -207,6 +256,16 @@ Save to: `newsletters/[newsletter-folder]/drafts/[YYYY-MM-DD]-[topic-slug].md`
 - `newsletter-folder` is the folder identified in Phase 1d.
 - `topic-slug` is a short, lowercase, hyphenated version of the topic (e.g., `the-power-of-saying-no`).
 - Always save automatically. Nothing should be lost.
+
+### Offer a TLDR
+
+After saving the draft, offer to generate a TLDR — a one-sentence curiosity hook for the top of the piece:
+
+> "Want a TLDR for the top? It's a one-line teaser that hooks readers before they start — great for email previews and social sharing."
+
+If the client says yes, run the `/tldr` skill on the draft. It will analyze the piece, generate 3 options using different hook strategies, and let the client pick one. The chosen TLDR gets placed at the top of the draft, right after the frontmatter.
+
+If the client says no or wants to skip it, move on. Do not push.
 
 ### Present to the client
 
